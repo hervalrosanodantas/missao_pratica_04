@@ -1,7 +1,7 @@
 <main class="container">
-  <h1 class="mb-4">Catálogo de Livros</h1>
+  <h1 class="my-5">Catálogo de Livros</h1>
   <table class="table table-hover">
-    <thead class="table-dark">
+    <thead class="table-success">
     <tr>
       <th>Título</th>
       <th>Resumo</th>
@@ -10,10 +10,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let livro of livros">
+    <tr class="my-5"  *ngFor="let livro of livros">
       <td>
         <p>{{livro.titulo}}</p>
-        <button class="btn btn-danger" (click)="excluir(livro.codigo)">Excluir</button>
+        <button class="btn btn-danger py-2" (click)="excluir(livro.codigo)">Excluir</button>
       </td>
       <td>{{livro.resumo}}</td>
       <td>{{obterNome(livro.codEditora)}}</td>
